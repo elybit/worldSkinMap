@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Human Skin Map</title>
+
+<style>
+
+  body{
+    background-color: #dadadc;
+  }
+  .countries {
+    fill: none;
+    stroke: #656567;
+    stroke-linejoin: round;
+  }
+  .legendThreshold {
+      font-size: 12px;
+      font-family: sans-serif;
+  }
+  .caption {
+      fill: #000;
+      text-anchor: start;
+      font-weight: bold;
+  }
+
+  .graticule {
+    fill:none;
+    stroke:#808082;
+    stroke-width:1px;
+    stroke-opacity:0.5;
+  }
+  .state {
+    fill:#c0c0c0;
+    stroke:white;
+    stroke-width:1px;
+  }
+
+  .equator{
+    stroke: #000;
+    stroke-width: 0.5px;
+  }
+  .title{
+    font-size:20px;
+    color:#000;
+  }
+
+  .label {
+    font-size: 3px;
+    font-weight: bold;
+    text-anchor: middle;
+    cursor: default;
+  }
+
+</style>
+</head>
+<body>
+ <div id="content">
+      <svg width="1400" height="700"></svg>
+ </div>
+
+<!-- script -->
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.js"></script>
+<script>
+
+      // The svg
+      var svg = d3.select("svg"),
+          width = +svg.attr("width"),
+          height = +svg.attr("height");
+
+
+      // Data and color scale
+      var data = d3.map();
+      var colorScheme = d3.schemeBrBG[11];
+      colorScheme.unshift("#ffffff")
+      var colorScale = d3.scaleThreshold()
+          .domain([1, 2, 3, 4, 5, 6, 7, 8])
+          .range(['#efeff1','#f7f2df','#e3d191','#f0d882','#e1c081','#bf9467','#7e4c2b','#653123' ]);
+
+      function showCountryName(name) {
+           svg.node().append('<div> <p>'+name+'</p></div>')
+      }
+
+      // Legend
+      var g = svg.append("g")
+          .attr("class", "legendThreshold")
+          .attr("transform", "translate(20,20)");
+
+      g.append("text")    
+          .attr("class", "caption")
+          .attr("x", 0)
+          .attr("y", -6)
+          .text("Human Skin Map");
+
+      var labels = ['1', '2', '3', '4', '5', '6','7','8'];
+      var legend = d3.legendColor()
+          .labels(function (d) { return labels[d.id]; })
+          .shapePadding(4)
+          .scale(colorScale);
+
+      svg.select(".legendThreshold")
+          .call(legend);
+
+      // Map and projection
+      var projection = d3.geoEquirectangular()
+          .scale(200)
+          .translate([width / 2, height/ 2 ])
+
+      // Create and configure a path generator
+      var path = d3.geoPath()
+          .projection(projection);
+
+      //Graticulate 
+
+       svg.append("path")
+         .datum({type: "LineString", coordinates: [[-180, 0], [-90, 0], [0, 0], [90, 0], [180, 0]]})
+         .attr("class", "equator")
+         .attr("d", path);
+
+      // Load external data and boot
+      d3.queue()
+          .defer(d3.json, "http://enjalot.github.io/wwsd/data/world/world-110m.geojson")
+          .defer(d3.csv, "./mooc-countries.csv", function(d) { data.set(d.code, +d.total); })
+          .await(ready);
+
+
+      function ready(error, topo) {
+          if (error) throw error;
+
+          // Draw the map
+          svg.append("g")
+              .attr("class", "countries")
+              .selectAll("path")
+              .data(topo.features)
+              .enter().append("path")
+              .attr("text", function(d) { 
+                 return d.properties.name; 
+              })
+              .attr("fill", function (d){
+                      // Pull data for this country
+                      d.total = data.get(d.id) || 0;
+                      // Set the color
+                      return colorScale( d.total);
+                  })
+              .attr("d", path);
+
+            var label = svg.selectAll("text")
+            .data(topo.features)
+            .enter()
+            .append("text")
+            .attr("class", "label")
+            .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+            .text(function(d) { return d.properties.name;} );
+
+      }
+
+
+</script>
+</body>
+</html>

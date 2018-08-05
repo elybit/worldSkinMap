@@ -1,0 +1,168 @@
+name,total,percent,code
+Albania,1,0,ALB
+Afghanistan,2,0,AFG
+Algeria,1,0,DZA
+Antigua And Barbuda,3,0,ATG
+Angola,5,0,AGO
+Argentina,1,0,ARG
+Armenia,2,0,ARM
+Australia,0,0,AUS
+Austria,0,0,AUT
+Azerbaijan,1,0,AZE
+Bangladesh,6,0,BGD
+Belarus,0,0,BLR
+Belgium,0,0,BEL
+Belize,5,0,BLZ
+Benin,6,0,BEN
+Bermuda,1,0,BMU
+"Bolivia, Plurinational State Of",4,0,BOL
+Bosnia And Herzegovina,1,0,BIH
+Botswana,6,0,BWA
+Brazil,5,0,BRA
+Bulgaria,1,0,BGR
+Burkina Faso,7,0,BFA
+Burundi,7,0,BDI
+Bhutan,4,0,BTN
+Cambodia,4,0,KHM
+Cameroon,6,0,CMR
+Canada,1,1,CAN
+Central African Republic,6,0,CAF
+Chad,5,0,TCD
+Chile,4,0,CHL
+China,1,0,CHN
+Colombia,4,0,COL
+Costa Rica,3,0,CRI
+Croatia,1,0,HRV
+Cuba,5,0,CUB
+Czechia,0,0,CZE
+Denmark,0,0,DNK
+Djibouti,5,0,DJI
+Democratic Republic of the Congo,6,0,COD
+Dominican Republic,5,0,DOM
+Ecuador,4,0,ECU
+Egypt,3,0,EGY
+El Salvador,5,0,SLV
+Eritrea,5,0,ERI
+Equatorial Guinea,6,0,GNQ
+Ethiopia,5,0,ETH
+Fiji,2,0,FJI
+Finland,0,0,FIN
+France,1,0,FRA
+French Southern and Antarctic Lands,6,0,ATF
+Gambia,8,0,GMB
+Gabon,6,0,GAB
+Georgia,1,0,GEO
+Germany,0,0,DEU
+Ghana,6,0,GHA
+Greece,1,0,GRC
+Guatemala,3,0,GTM
+Guinea,8,0,GIN
+Guinea-Bissau,8,0,GNB
+Guyana,6,0,GUY
+Haiti,6,0,HTI
+Honduras,6,0,HND
+Hong Kong,20,0,HKG
+Hungary,1,0,HUN
+India,5,0,IND
+Indonesia,2,0,IDN
+Iran,2,0,IRN
+Iraq,2,0,IRQ
+Ireland,0,0,IRL
+Israel,3,0,ISR
+Italy,1,1,ITA
+Jamaica,6,0,JAM
+Japan,1,0,JPN
+Jordan,4,0,JOR
+Kazakhstan,1,0,KAZ
+Kenya,6,0,KEN
+"Korea, Republic Of",1,0,KOR
+Kyrgyzstan,1,0,KGZ
+Kuwait,3,0,KWT
+Laos,4,0,LAO
+Latvia,1,0,LVA
+Lebanon,3,0,LBN
+Lesotho,6,0,LSO
+Liberia,6,0,LBR
+Libya,3,0,LBY
+Macedonia,1,0,MKD
+Malawi,5,0,MWI
+Malaysia,2,0,MYS
+Mali,4,0,MLI
+Madagascar,6,0,MDG
+Mauritania,5,0,MRT
+Mexico,2,0,MEX
+Moldova,1,0,MDA
+Mongolia,1,0,MNG
+Morocco,2,0,MAR
+Mozambique,6,0,MOZ
+Myanmar,2,0,MMR
+Namibia,5,0,NAM
+Nepal,4,0,NPL
+Netherlands,1,0,NLD
+New Caledonia,3,0,NCL
+New Zealand,2,0,NZL
+Nicaragua,4,0,NIC
+Nigeria,7,0,NGA
+Niger,5,0,NER
+Norway,0,0,NOR
+North Korea,1,0,PRK
+OMAN,4,0,OMN
+Pakistan,4,0,PAK
+"Palestine, State Of",3,0,PSE
+Panama,2,0,PAN
+Paraguay,3,0,PRY
+Papua New Guinea,4,0,PNG
+Peru,4,0,PER
+Philippines,3,0,PHL
+Poland,0,0,POL
+Portugal,1,0,PRT
+Puerto Rico,3,0,PRI
+Qatar,4,0,QAT
+Republic of the Congo,6,0,COG
+Romania,1,0,ROU
+Russian Federation,1,0,RUS
+Rwanda,6,0,RWA
+Réunion,1,0,REU
+Saudi Arabia,3,0,SAU
+Senegal,5,0,SEN
+Serbia,1,0,SRB
+Sierra Leone,6,0,SLE
+Singapore,11,0,SGP
+Slovakia,0,0,SVK
+Somalia,6,0,SOM
+Somaliland,6,0,ABV
+South Africa,4,0,ZAF
+South Sudan,5,0,SDS
+Spain,1,0,ESP
+Sri Lanka,6,0,LKA
+Sudan,5,0,SDN
+Suriname,5,0,SUR
+Swaziland,6,0,SWZ
+Sweden,0,0,SWE
+Switzerland,0,0,CHE
+Syria,2,0,SYR
+Taiwan,1,0,TWN
+"Tanzania, United Republic Of",6,0,TZA
+Tajikistan,1,0,TJK
+Thailand,2,0,THA
+The Bahamas,6,0,BHS
+Timor-Leste,1,0,TLS
+Togo,4,0,TGO
+Trinidad And Tobago,5,0,TTO
+Tunisia,3,0,TUN
+Turkmenistan,1,0,TKM
+Turkey,1,0,TUR
+Uganda,8,0,UGA
+Ukraine,1,0,UKR
+United Arab Emirates,4,0,ARE
+United Kingdom,0,0,GBR
+United States,1,0,USA
+Uzbekistan,1,0,UZB
+Uruguay,4,0,URY
+Ivory Coast,6,0,CIV
+Yemen,5,0,YEM
+"Venezuela, Bolivarian Republic Of",4,0,VEN
+Viet Nam,3,0,VNM
+Western Sahara,4,0,ESH
+Zambia,8,0,ZMB
+Zimbabwe,8,0,ZWE
